@@ -1,0 +1,187 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+#P1 
+
+
+# In[3]:
+
+
+listie=[3,4,6,10,39,87,12,54]
+
+max(listie)
+
+
+# In[4]:
+
+
+min(listie)
+
+
+# In[ ]:
+
+
+
+
+
+# In[5]:
+
+
+listie.sort()
+
+
+# In[6]:
+
+
+print(listie)
+
+
+# In[7]:
+
+
+#P2
+
+
+# In[10]:
+
+
+listNO=[]
+listYES=[]
+
+def prime (num):
+    if num>1:
+        for j in range (2,num):
+            if (num%j)==0:
+                listNO.append(num)
+                break
+            else:
+                listYES.append(num)
+    else:
+        listNO.append(num)
+    return
+
+listPRIMES=[]
+[listPRIMES.append(x) for x in listYES if x not in listYES]
+print(listPRIMES)
+
+
+# In[13]:
+
+
+for j in range (1,100):
+    prime(j)
+
+    listPRIMES=[]
+
+[listPRIMES.append(x) for x in listYES if x not in listPRIMES]
+
+print(listPRIMES)
+
+
+# In[21]:
+
+
+listPRIMESS=[]
+listYESS=[]
+listNOO=[]
+
+def RANGE (num):
+    listPRIMESS=[]
+    listYESS=[]
+    
+    for j in range (1,100):
+        if (num%j)==0:
+            listNOO.append(num)
+            break
+        else:
+            listYESS.append(num)
+    return
+    listPRIMESS=[]
+    [listPRIMESS.append(x) for x in listYESS if x not in listPRIMESS]
+    
+    print(listPRIMESS)
+    
+    
+
+
+# In[ ]:
+
+
+#P3
+
+
+# In[ ]:
+
+
+
+
+
+# In[1]:
+
+
+#P4
+
+
+# In[ ]:
+
+
+#import numpy as np
+
+#a = np.array([3,4,-5],[0,5,1],[1,3,6])
+#b = np.array([10,8,-5])
+#x = np.linalg.solve(a,b)
+
+#print(x)
+
+
+# In[ ]:
+
+
+
+
+
+# In[1]:
+
+
+#P5
+
+
+# In[ ]:
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-5,5,100)
+
+y = 0.1*x**3-x**2+5
+
+fig = plt.figure()
+ax = fig.add_subplot(1,1,1)
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot(x,y,'r')
+
+plt.show()
+
+#this seems to run in my Spyder Launch for Anaconda but not in here. Cannot find typo here
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
